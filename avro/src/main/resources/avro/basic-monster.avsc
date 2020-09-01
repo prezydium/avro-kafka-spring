@@ -1,0 +1,32 @@
+{
+  "type": "record",
+  "namespace": "com.presidium.dev",
+  "name": "BasicMonster",
+  "fields": [
+    {
+      "name": "name",
+      "type": "string",
+      "doc": "Name of monster"
+    },
+    {
+      "name": "attack",
+      "type": "int",
+      "doc": "Attack power"
+    },
+    {
+      "name": "health_points",
+      "type": "int",
+      "doc": "Hp of monster"
+    },
+    {
+      "name": "armor",
+      "type": "int",
+      "doc": "Armor class"
+    },
+    {
+      "name": "loot",
+      "type": "int",
+      "doc": "Gold amount"
+    }
+  ]
+}

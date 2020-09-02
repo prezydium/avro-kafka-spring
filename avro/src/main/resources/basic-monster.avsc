@@ -10,7 +10,7 @@
     },
     {
       "name": "attack",
-      "type": "int",
+      "type": "float",
       "doc": "Attack power"
     },
     {
@@ -26,6 +26,7 @@
     {
       "name": "loot",
       "type": "int",
+      "default": 1,
       "doc": "Gold amount"
     }
   ]

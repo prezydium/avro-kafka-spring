@@ -15,7 +15,7 @@ import java.util.List;
 
 public class GenericRecordExample {
 
-    private static final String SCHEMA_FILEPATH = "C:\\dev\\avro-kafka-spring\\avro\\src\\main\\resources\\basic-monster.avsc";
+    private static final String SCHEMA_FILEPATH = "C:\\dev\\avro-kafka-spring\\avro\\src\\main\\resources\\avro\\basic-monster.avsc";
     private static final String FILE_NAME = "monster.avro";
 
     public static void main(String[] args) throws IOException {

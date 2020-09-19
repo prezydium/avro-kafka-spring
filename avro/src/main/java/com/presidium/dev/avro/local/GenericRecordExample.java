@@ -1,4 +1,4 @@
-package com.presidium.dev.avro;
+package com.presidium.dev.avro.local;
 
 import org.apache.avro.Schema;
 import org.apache.avro.file.DataFileReader;

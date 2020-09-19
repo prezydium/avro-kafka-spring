@@ -1,4 +1,4 @@
-package com.presidium.dev.avro;
+package com.presidium.dev.avro.local;
 
 public class ReflectedBasicMonster {
 

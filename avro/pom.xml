@@ -13,16 +13,29 @@
 
     <properties>
         <avro.version>1.8.2</avro.version>
+        <kafka.version>0.11.0.1</kafka.version>
+        <confluent.version>3.3.1</confluent.version>
     </properties>
 
+    <repositories>
+        <repository>
+            <id>confluent</id>
+            <url>http://packages.confluent.io/maven/</url>
+        </repository>
+    </repositories>
 
     <dependencies>
-        <!--Only dependency needed for the avro part-->
-        <!-- https://mvnrepository.com/artifact/org.apache.avro/avro -->
+
         <dependency>
-            <groupId>org.apache.avro</groupId>
-            <artifactId>avro</artifactId>
-            <version>${avro.version}</version>
+            <groupId>org.apache.kafka</groupId>
+            <artifactId>kafka-clients</artifactId>
+            <version>${kafka.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>io.confluent</groupId>
+            <artifactId>kafka-avro-serializer</artifactId>
+            <version>${confluent.version}</version>
         </dependency>
 
     </dependencies>

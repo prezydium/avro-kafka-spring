@@ -1,4 +1,4 @@
-package com.presidium.dev.avro;
+package com.presidium.dev.avro.local;
 
 import com.presidium.dev.BasicMonster;
 import org.apache.avro.file.DataFileReader;

@@ -8,6 +8,8 @@ import org.apache.avro.io.DatumWriter;
 
 import java.io.File;
 import java.io.IOException;
+import java.net.URISyntaxException;
+import java.net.URL;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.util.ArrayList;
@@ -15,12 +17,13 @@ import java.util.List;
 
 public class GenericRecordExample {
 
-    private static final String SCHEMA_FILEPATH = "C:\\dev\\avro-kafka-spring\\avro\\src\\main\\resources\\avro\\basic-monster.avsc";
+    private static final String SCHEMA_RESOURCE = "avro/basic-monster.avsc";
     private static final String FILE_NAME = "monster.avro";
 
-    public static void main(String[] args) throws IOException {
+    public static void main(String[] args) throws IOException, URISyntaxException {
         Schema.Parser parser = new Schema.Parser();
-        String schemaAsString = Files.readString(Path.of(SCHEMA_FILEPATH));
+        URL schemaResourceURL = ClassLoader.getSystemResource(SCHEMA_RESOURCE);
+        String schemaAsString = Files.readString(Path.of(schemaResourceURL.toURI()));
         Schema schema = parser.parse(schemaAsString);
         GenericRecordBuilder recordBuilder = new GenericRecordBuilder(schema);
 
